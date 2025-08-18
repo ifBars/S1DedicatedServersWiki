@@ -34,7 +34,7 @@ jobs:
           restore-keys: |
             pip-${{ runner.os }}-
       - name: Install dependencies
-        run: pip install -r S1DedicatedServersWiki/requirements.txt
+        run: pip install -r requirements.txt
       - name: Build site
         working-directory: S1DedicatedServersWiki
         run: mkdocs build --strict
