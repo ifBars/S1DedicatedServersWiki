@@ -1,0 +1,136 @@
+site_name: S1 Dedicated Servers Wiki
+site_url: https://ifbars.github.io/S1DedicatedServersWiki
+site_description: Comprehensive guide for Schedule One dedicated servers
+site_author: S1 Community
+
+# Repository
+repo_name: ifbars/S1DedicatedServers
+repo_url: https://github.com/ifBars/S1DedicatedServers
+edit_uri: edit/main/docs/
+
+# Theme configuration
+theme:
+  name: material
+  palette:
+    # Dark mode
+    - scheme: slate
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    # Light mode
+    - scheme: default
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+  
+  # Customization
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  
+  # Features
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - navigation.footer
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tabs.tabs
+    - content.code.select
+    - content.tooltips
+    - header.autohide
+  
+  # Icons
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+  
+  # Font
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+# Navigation
+nav:
+  - Home:
+      - Overview: index.md
+      - Installation: home/installation.md
+  - Configuration:
+      - Quick start: configuration.md
+      - Save path: configuration/save-path.md
+      - Permissions: configuration/permissions.md
+      - Auto-save: configuration/autosave.md
+      - Gameplay: configuration/gameplay.md
+  - Commands:
+      - Overview: commands.md
+      - Server commands: commands/server-commands.md
+      - Admin commands: commands/admin-commands.md
+      - Player management: commands/player-management.md
+  - Troubleshooting:
+      - Overview: troubleshooting.md
+      - Networking: troubleshooting/networking.md
+      - Save/Load: troubleshooting/save-load.md
+      - Time & Sleep: troubleshooting/time-sleep.md
+
+# Plugins
+plugins:
+  - search
+
+# Extra CSS and JS
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+# Markdown extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - codehilite:
+      guess_lang: false
+      use_pygments: true
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      title: On this page
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - pymdownx.tilde
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ifbars/S1DedicatedServersWiki
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/scheduleone
