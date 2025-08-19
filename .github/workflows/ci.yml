@@ -7,13 +7,7 @@ on:
 
 # Required for GitHub Pages deployment via Actions
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
+  contents: write
 
 jobs:
   build:
@@ -37,10 +31,6 @@ jobs:
         run: pip install -r requirements.txt
       - name: Build site
         run: mkdocs build --strict
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
 
   deploy:
     needs: build
