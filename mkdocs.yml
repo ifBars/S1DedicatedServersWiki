@@ -76,6 +76,11 @@ nav:
       - Server commands: commands/server-commands.md
       - Admin commands: commands/admin-commands.md
       - Player management: commands/player-management.md
+  - Modding:
+      - Overview: modding/overview.md
+      - Server API: modding/server.md
+      - Client API: modding/client.md
+      - Messaging: modding/messaging.md
   - Troubleshooting:
       - Overview: troubleshooting.md
       - Networking: troubleshooting/networking.md
