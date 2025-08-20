@@ -12,26 +12,28 @@
         <meta name="author" content="S1 Community">
       
       
-        <link rel="canonical" href="https://ifbars.github.io/S1DedicatedServersWiki/">
+        <link rel="canonical" href="https://ifbars.github.io/S1DedicatedServersWiki/modding/client/">
       
       
+        <link rel="prev" href="../server/">
       
-        <link rel="next" href="home/installation/">
+      
+        <link rel="next" href="../messaging/">
       
       
-      <link rel="icon" href="assets/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
     
     
       
-        <title>Overview - S1 Dedicated Servers Wiki</title>
+        <title>Client API - S1 Dedicated Servers Wiki</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#schedule-i-dedicated-server" class="md-skip">
+        <a href="#lifecycle-hooks" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="S1 Dedicated Servers Wiki" class="md-header__button md-logo" aria-label="S1 Dedicated Servers Wiki" data-md-component="logo">
+    <a href="../.." title="S1 Dedicated Servers Wiki" class="md-header__button md-logo" aria-label="S1 Dedicated Servers Wiki" data-md-component="logo">
       
-  <img src="assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Client API
             
           </span>
         </div>
@@ -225,13 +227,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="." class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
           
   
   
@@ -251,7 +251,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="configuration/" class="md-tabs__link">
+        <a href="../../configuration/" class="md-tabs__link">
           
   
   
@@ -271,7 +271,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="commands/" class="md-tabs__link">
+        <a href="../../commands/" class="md-tabs__link">
           
   
   
@@ -287,11 +287,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="modding/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
           
   
   
@@ -311,7 +313,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="troubleshooting/" class="md-tabs__link">
+        <a href="../../troubleshooting/" class="md-tabs__link">
           
   
   
@@ -345,9 +347,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="S1 Dedicated Servers Wiki" class="md-nav__button md-logo" aria-label="S1 Dedicated Servers Wiki" data-md-component="logo">
+    <a href="../.." title="S1 Dedicated Servers Wiki" class="md-nav__button md-logo" aria-label="S1 Dedicated Servers Wiki" data-md-component="logo">
       
-  <img src="assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     S1 Dedicated Servers Wiki
@@ -371,31 +373,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
   
@@ -408,7 +407,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Home
@@ -419,30 +418,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -453,50 +432,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#schedule-i-dedicated-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schedule I Dedicated Server
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schedule I Dedicated Server">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#this-mod-is-in-alpha" class="md-nav__link">
-    <span class="md-ellipsis">
-      This mod is in alpha
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -509,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="home/installation/" class="md-nav__link">
+      <a href="../../home/installation/" class="md-nav__link">
         
   
   
@@ -584,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="configuration/" class="md-nav__link">
+      <a href="../../configuration/" class="md-nav__link">
         
   
   
@@ -607,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="configuration/save-path/" class="md-nav__link">
+      <a href="../../configuration/save-path/" class="md-nav__link">
         
   
   
@@ -630,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="configuration/permissions/" class="md-nav__link">
+      <a href="../../configuration/permissions/" class="md-nav__link">
         
   
   
@@ -653,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="configuration/autosave/" class="md-nav__link">
+      <a href="../../configuration/autosave/" class="md-nav__link">
         
   
   
@@ -676,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="configuration/gameplay/" class="md-nav__link">
+      <a href="../../configuration/gameplay/" class="md-nav__link">
         
   
   
@@ -751,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="commands/" class="md-nav__link">
+      <a href="../../commands/" class="md-nav__link">
         
   
   
@@ -774,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="commands/server-commands/" class="md-nav__link">
+      <a href="../../commands/server-commands/" class="md-nav__link">
         
   
   
@@ -797,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="commands/admin-commands/" class="md-nav__link">
+      <a href="../../commands/admin-commands/" class="md-nav__link">
         
   
   
@@ -820,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="commands/player-management/" class="md-nav__link">
+      <a href="../../commands/player-management/" class="md-nav__link">
         
   
   
@@ -847,28 +782,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -881,7 +819,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Modding
@@ -895,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="modding/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -918,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="modding/server/" class="md-nav__link">
+      <a href="../server/" class="md-nav__link">
         
   
   
@@ -938,10 +876,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="modding/client/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Client API
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -952,6 +910,77 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lifecycle-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lifecycle hooks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto-discovery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual registration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -964,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="modding/messaging/" class="md-nav__link">
+      <a href="../messaging/" class="md-nav__link">
         
   
   
@@ -1039,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting/" class="md-nav__link">
+      <a href="../../troubleshooting/" class="md-nav__link">
         
   
   
@@ -1062,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting/networking/" class="md-nav__link">
+      <a href="../../troubleshooting/networking/" class="md-nav__link">
         
   
   
@@ -1085,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting/save-load/" class="md-nav__link">
+      <a href="../../troubleshooting/save-load/" class="md-nav__link">
         
   
   
@@ -1108,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="troubleshooting/time-sleep/" class="md-nav__link">
+      <a href="../../troubleshooting/time-sleep/" class="md-nav__link">
         
   
   
@@ -1158,19 +1187,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#schedule-i-dedicated-server" class="md-nav__link">
+  <a href="#lifecycle-hooks" class="md-nav__link">
     <span class="md-ellipsis">
-      Schedule I Dedicated Server
+      Lifecycle hooks
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Schedule I Dedicated Server">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#client-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#this-mod-is-in-alpha" class="md-nav__link">
+  <a href="#auto-discovery" class="md-nav__link">
     <span class="md-ellipsis">
-      This mod is in alpha
+      Auto-discovery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual registration
     </span>
   </a>
   
@@ -1200,24 +1256,64 @@
   
 
 
-  <h1>Overview</h1>
+  <h1>Client API</h1>
 
-<h2 id="schedule-i-dedicated-server">Schedule I Dedicated Server<a class="headerlink" href="#schedule-i-dedicated-server" title="Permanent link">&para;</a></h2>
-<p>Run a headless, authoritative server for Schedule I using the Dedicated Server Mod. The server replicates the original host flow (network, loopback client, save/load, quests, time, sleep) and is designed for long-running worlds.</p>
-<h3 id="this-mod-is-in-alpha">This mod is in alpha<a class="headerlink" href="#this-mod-is-in-alpha" title="Permanent link">&para;</a></h3>
-<p>This release is an early alpha (beta at best). You should expect bugs, incomplete features, and occasional instability. I'm releasing it in a working but not fully stable state specifically to gather community feedback and iterate quickly.</p>
+<p>Client mods implement <code>IClientMod</code> (or inherit <code>ClientModBase</code> / <code>ClientMelonModBase</code>) and access client managers via <code>S1DS.Client</code>.</p>
+<h2 id="lifecycle-hooks">Lifecycle hooks<a class="headerlink" href="#lifecycle-hooks" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Please search existing issues before opening a new one; if you don't see your problem reported, opening an issue on GitHub is encouraged.</li>
-<li>Reproduction steps, logs, and any installed mods details are extremely helpful.</li>
-<li>Feedback, suggestions, and pull requests are welcome and appreciated.</li>
+<li><code>OnClientInitialize()</code></li>
+<li><code>OnClientShutdown()</code></li>
+<li><code>OnConnectedToServer()</code></li>
+<li><code>OnDisconnectedFromServer()</code></li>
+<li><code>OnClientPlayerReady()</code></li>
+<li><code>bool OnCustomMessage(string messageType, byte[] data)</code></li>
+<li><code>OnUIUpdate()</code></li>
+<li><code>OnServerEvent(string eventType, object eventData)</code></li>
 </ul>
-<p>Thanks for helping test and shape open source Schedule I servers!</p>
+<p>Use <code>OnClientPlayerReady()</code> for logic that depends on UI/messaging being initialized.</p>
+<h2 id="client-systems">Client systems<a class="headerlink" href="#client-systems" title="Permanent link">&para;</a></h2>
+<p>Available in CLIENT builds via <code>S1DS.Client</code>:</p>
+<ul>
+<li><code>ClientCore</code></li>
+<li><code>Connection</code> (connection status, connect/disconnect)</li>
+<li><code>UI</code> (UI manager)</li>
+<li><code>PlayerSetup</code> (local player setup)</li>
+<li><code>Console</code>, <code>Quests</code>, <code>Loopback</code>, <code>Transport</code></li>
+<li><code>IsConnected</code>, <code>IsInitialized</code></li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnClientPlayerReady</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">S1DS</span><span class="p">.</span><span class="n">Client</span><span class="p">.</span><span class="n">IsConnected</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Messaging and UI are safe to use here</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="registration">Registration<a class="headerlink" href="#registration" title="Permanent link">&para;</a></h2>
+<h3 id="auto-discovery">Auto-discovery<a class="headerlink" href="#auto-discovery" title="Permanent link">&para;</a></h3>
+<p>Any <code>MelonMod</code> that implements <code>IClientMod</code> is automatically discovered and registered. This works with:</p>
+<ul>
+<li><code>SideAwareMelonModBase</code> (both server and client hooks)</li>
+<li><code>ClientMelonModBase</code> (client-only mod with auto-discovery)</li>
+<li>Any class that implements <code>IClientMod</code> interface</li>
+</ul>
+<h3 id="manual-registration">Manual registration<a class="headerlink" href="#manual-registration" title="Permanent link">&para;</a></h3>
+<p>For more control, create separate client handler classes and register them explicitly:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// In your main MelonMod.OnInitializeMelon()</span>
+<span class="cp">#if CLIENT</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">clientMod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyClientHandler</span><span class="p">();</span>
+<span class="n">ModManager</span><span class="p">.</span><span class="n">RegisterClientMod</span><span class="p">(</span><span class="n">clientMod</span><span class="p">);</span>
+<span class="cp">#endif</span>
+</code></pre></div>
+<p>Registration ensures client message forwarding is wired so <code>OnCustomMessage</code> can be triggered.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -1248,15 +1344,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../server/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Server API">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Server API
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="home/installation/" class="md-footer__link md-footer__link--next" aria-label="Next: Installation">
+          <a href="../messaging/" class="md-footer__link md-footer__link--next" aria-label="Next: Messaging">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Installation
+                Messaging
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1318,12 +1430,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "navigation.footer", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tabs.tabs", "content.code.select", "content.tooltips", "header.autohide"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "navigation.footer", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tabs.tabs", "content.code.select", "content.tooltips", "header.autohide"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
-        <script src="javascripts/extra.js"></script>
+        <script src="../../javascripts/extra.js"></script>
       
     
   </body>
